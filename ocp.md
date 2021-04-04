@@ -1,8 +1,8 @@
 # Open-closed Principle (OCP)
 
-Imagine we want to add some new code. How much of old one do we have to update?
+Imagine we want to add new code. How much of the old one do we have to update?
 
-None of it is the right answer!
+None is the right answer!
 
 > Software entities should be open for extension, but closed for modification
 >
