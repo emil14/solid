@@ -4,7 +4,7 @@
 >
 > Barbara Liskov
 
-Or as Uncle Martin define:
+Or as Uncle Bob define:
 
 > Functions that use base type should be able to use subtypes without knowing about it.
 >
