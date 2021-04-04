@@ -50,7 +50,9 @@ func (a A) CalcPay() {
 }
 ```
 
-As it turns out, _HR_ departament did not want those changes. System is broken.
+As it turns out, _HR_ departament did not want those changes.
+
+System is broken.
 
 ### Merge conflicts
 
@@ -74,7 +76,7 @@ Because you can't get unwanted changes in one entity while changing the other if
 
 ```go
 type Employee struct {
-    ed employeeData
+    ed employeeData // just a data without behaviour
 }
 
 func (a A) CalcPay() {
@@ -90,9 +92,9 @@ func (a A) ReportHours() {
 
 `Employee` type acts as a facade for `payCalculator` and `hourReporter`.
 
-Both `payCalculator` and `hourReporter` are _independent_ from each other.
+Both `payCalculator` and `hourReporter` are _independent_ from each other (they depend on `employeeData` but it's safe, `employeeData` have no behaviour).
 
-We can safely change them.
+We can now safely change them.
 
 ## Conclusion
 
