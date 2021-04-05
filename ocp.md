@@ -9,7 +9,7 @@ None is the right answer!
 > Bertrand Meyer
 
 - _Open entity_ is a class that we can inherit, function we can compose, interface we can implement, etc. Entity we can _extend_.
-- _Closed entity_ is an entity we can extend it without modifying it. "Closed" means "we don't have to".
+- _Closed entity_ is an entity we can extend without modifying it. "Closed" means "we don't have to".
 
 ## Problem
 
