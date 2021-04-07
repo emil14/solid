@@ -101,7 +101,3 @@ SRP **is not about classes (or methods) doing one thing**.
 It's about **things having just one responsibility each** where _responsibility_ is _reason to change_ and where "thing" is a _software entity_.
 
 SRP says that we **should not** have dependencies between entities that has different reasons to change.
-
----
-
-DON'T BRING ACTORS TOGETHER

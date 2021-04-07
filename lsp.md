@@ -130,12 +130,7 @@ func testShape(s Shape) {
 LSP is all about choosing the right abstraction.
 
 If you find you're self _extending_ existing entity, ask yourself - should I _really_ extend this one?
-Derived class must be at least be as _useful_ as extended one.  
-Extending entity means deriving a subclass or implementing interface.
-If you add new implementations of existing abstraction, make sure you picked a right one.
-Can this implementation be used
-Your code should work with subtypes without modifications. Keep an eye on what you derive (or implement).
 
----
+Derived class must be at least be as _useful_ as extended one.
 
-DERIVED ENTITY MUST BE ABLE TO REPLACE EXTENDED ONE
+Your code should work with subtypes without modifications. Keep an eye on what you derive or implement.

@@ -96,7 +96,3 @@ For example `web-presenter` component may depend on `controller` component but n
 OCP **is not about encapsulation**.
 
 OCP is about **make it easy to extend things without modifying them**.
-
----
-
-MAKE IT EASY TO EXTEND THINGS

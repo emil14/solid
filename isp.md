@@ -50,5 +50,3 @@ Because clients of `Save` function now depend on small `io.Writer` interface. Th
 ## Conclusion
 
 ISP is all about **having a lot of small interfaces is better than having a few big ones**.
-
----
