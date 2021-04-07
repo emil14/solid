@@ -133,6 +133,10 @@ Dependency flow has been inverted.
 
 Instead of hight-level components depending on low-level components we have details depended from abstractions in hight level component.
 
+> All problems in computer science can be solved by another level of indirection, except of course for the problem of too many indirections
+>
+> David J. Wheeler
+
 ---
 
 LET HIGHER LEVEL MODULES OWN ABSTRACTIONS
