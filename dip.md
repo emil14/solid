@@ -111,7 +111,7 @@ type MySQL struct {
     // some internal state
 }
 
-func (w Web) UserByEmail(email string) app.User {
+func (m MySQL) UserByEmail(email string) app.User {
     // select user by email from mysql database
 }
 ```
