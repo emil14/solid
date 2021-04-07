@@ -18,7 +18,7 @@ Knowing that a couple of advices could be spelled:
 
 ## Problems
 
-Strong coupling that leads to unnecessary modifications.
+Hight level modules needs modifications because of modifications in low-level modules
 
 ```go
 package app
