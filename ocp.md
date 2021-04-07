@@ -6,15 +6,15 @@
 
 Here's what it means
 
-- _Entity opened for extention_ means **it's easy to extend it's behavior** where _extend behavior_ is "extend class" or "implement interface".
-- _Entity closed for modification_ means **there is no need in _modifying_ it in order to _extend its behaviour_**.
+- _Entity opened for extention_ means **it's easy to extend it's behavior**
+- _Entity closed for modification_ means **there is no need in _modifying_ it in order to _extend its behaviour_**
 
-So if it's hard to _extend_ or there's a need in _modifying_ - an Open-Closed Principle is violated.
+So if it's hard to _extend_ or there's a need in _modifying_, it's an OCP violation.
 
 ## Problems
 
-1. One cannot extend entity and code need to be duplicated.
-2. One cannot extend entity without modifying it.
+1. Entity can't be extended without duplication
+2. Entity can't be extended without modification
 
 ## Example
 
@@ -28,7 +28,7 @@ func countWords() {
 }
 ```
 
-Now imagine if we have to add an ability to count words in a string from url
+Now imagine if we add an ability to count words in a string from url
 
 ```go
 func countWords(file bool) int {
@@ -68,9 +68,13 @@ func countWordsFile() int {
 }
 ```
 
-Note than `countWords` now takes `string` which is a very common data type and it makes it easy to use `countWords` in a lot of scenarios.
+Note than `countWords` now takes `string` which is a very common data type and it makes it easy to use `countWords` in a lot of scenarios. It makes it easy to *extend* it.
 
 In more complex cases we should use abstract types like interfaces. Because abstract requirements are easyier to satisfy than concrete ones. `io.Writer` and `io.Reader` are good examples of this.
+
+> A great rule of thumb for Go is accept interfaces, return structs.
+>
+> Jack Lindamood
 
 ### Why it works
 
