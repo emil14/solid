@@ -1,23 +1,24 @@
 # Open-closed Principle (OCP)
 
-Imagine we want to add new code. How much of the old one do we have to update?
-
-None is the right answer!
-
 > Software entities should be open for extension, but closed for modification
 >
 > Bertrand Meyer
 
-- _Open entity_ is a class that we can inherit, function we can compose, interface we can implement, etc. Entity we can _extend_.
-- _Closed entity_ is an entity we can extend without modifying it. "Closed" means "we don't have to".
+Here's what it means
 
-## Problem
+- _Entity opened for extention_ means **it's easy to extend it's behavior** where _extend behavior_ is "extend class" or "implement interface".
+- _Entity closed for modification_ means **there is no need in _modifying_ it in order to _extend its behaviour_**.
 
-We cannot extend entity and we have to duplicate its code or we cannot extend it without modifying it.
+So if it's hard to _extend_ or there's a need in _modifying_ - an Open-Closed Principle is violated.
+
+## Problems
+
+1. One cannot extend entity and code need to be duplicated.
+2. One cannot extend entity without modifying it.
 
 ## Example
 
-Suppose we have this code:
+Suppose we have this
 
 ```go
 func countWords() {
@@ -27,9 +28,7 @@ func countWords() {
 }
 ```
 
-Now imagine that we have to add an ability not only count words in a file but also from a url. What shall we do?
-
-Well, we could do something like this:
+Now imagine if we have to add an ability to count words in a string from url
 
 ```go
 func countWords(file bool) int {
@@ -45,16 +44,15 @@ func countWords(file bool) int {
 }
 ```
 
-This is a bad solution because in real life very soon function will consist of dozens of if statement in different places.
+Very soon function will become consisting of dozens `if` statement in multiple different places.
 
 `countWords` violates not only OCP (it's hard to extend it) but also SPR (making a request and reading from a file are different responsibilities).
 
 ## Solution
 
-Move _less important_ parts out of the _more important_ and make them _depend_ on it.
+Move _less important_ parts out of the _more important_ ones and make them _depend_ on them.
 
 ```go
-// important part independent
 func countWords(s string) int {
     return len(strings.Split(s, " "))
 }
@@ -69,6 +67,10 @@ func countWordsFile() int {
     return countWords(string(resp.Body()))
 }
 ```
+
+Note than `countWords` now takes `string` which is a very common data type and it makes it easy to use `countWords` in a lot of scenarios.
+
+In more complex cases we should use abstract types like interfaces. Because abstract requirements are easyier to satisfy than concrete ones. `io.Writer` and `io.Reader` are good examples of this.
 
 ### Why it works
 
@@ -87,8 +89,10 @@ For example `web-presenter` component may depend on `controller` component but n
 
 ## Conclusion
 
-OCP **is not about inability to change something and it's not only about class inheritance**.
+OCP **is not about encapsulation**.
 
-At the code level it means **make things extendable without need to modify them** where _extend_ means "create new thing from old thing to reuse some of its functionality".
+OCP is about **make it easy to extend things without modifying them**.
 
-At the "components level" it means **things that change often should depends on things that changes not so often**. That's how we _protect_ important things from changes in less important things.
+---
+
+MAKE IT EASY TO EXTEND THINGS

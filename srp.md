@@ -58,8 +58,6 @@ System is broken.
 
 Multiple reasons to change leads to higher probability of several programmers making changes in same place so it leads to highter probability of merge conflict.
 
-## When it happends
-
 We let the code be used by different actors at the same time. We _bring actors together_.
 
 ## Solution
@@ -103,3 +101,7 @@ SRP **is not about classes (or methods) doing one thing**.
 It's about **things having just one responsibility each** where _responsibility_ is _reason to change_ and where "thing" is a _software entity_.
 
 SRP says that we **should not** have dependencies between entities that has different reasons to change.
+
+---
+
+DON'T BRING ACTORS TOGETHER

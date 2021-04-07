@@ -49,8 +49,6 @@ Because clients of `Save` function now depend on small `io.Writer` interface. Th
 
 ## Conclusion
 
-> Accept interfaces, return structs.
->
-> Jack Lindamood
-
 ISP is all about **having a lot of small interfaces is better than having a few big ones**.
+
+---
