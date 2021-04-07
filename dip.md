@@ -18,11 +18,7 @@ Knowing that a couple of advices could be spelled:
 
 ## Problems
 
-The more coupling we have the more modifications we have to do.
-
-Every SOLID violation leads to stronger coupling but
-
-Modification of one entity leads to modification of the other.
+Strong coupling that leads to unnecessary modifications.
 
 ```go
 package app
