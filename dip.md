@@ -126,7 +126,7 @@ Changes in "B" cannot lead to changes in "A".
 
 ## Conclusion
 
-Dependency must be opposite (inverted) to the flow of control. 
+Dependency flow must be opposite to the flow of control. It should be *inverted*.
 
 Instead of hight-level components depending on low-level components we will have details depending on hight level abstractions.
 
