@@ -20,7 +20,7 @@
 
 ## Liskov substitution principle (LSP)
 
-> Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+> Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.
 >
 > Barbara Liskov
 
