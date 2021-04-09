@@ -102,4 +102,4 @@ It's about **things having just one responsibility each** where _responsibility_
 
 SRP says that we **should not** have dependencies between entities that has different reasons to change.
 
-[Back to swag](../README.md)
+[Back to swag](https://github.com/emil14/solid/README.md)
